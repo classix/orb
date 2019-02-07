@@ -75,7 +75,7 @@ var ops = filtering.Operators = {
             if(value) {
                 return value.toString().search(utils.isRegExp(term) ? term : new RegExp(term, 'i')) >= 0;
             } else {
-                return !(!!term);
+                return !term;
             }
         },
         regexpSupported: true

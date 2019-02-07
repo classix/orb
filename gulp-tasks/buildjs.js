@@ -32,8 +32,8 @@ module.exports = function () {
     var bundle = function () {
         return bundler
             .transform(babelify, {
-                presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['transform-runtime']
+                presets: ['@babel/preset-env', "@babel/preset-react"],
+                plugins: ["@babel/plugin-transform-runtime"]
             })
             .bundle()
             .pipe(source(vars.lib.name + '.js'))

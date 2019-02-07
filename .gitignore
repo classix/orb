@@ -7,3 +7,4 @@ tmp
 project.*
 orb.xproj*
 orb.sln
+dist

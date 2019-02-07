@@ -29,3 +29,8 @@ gulp.task('fullbuild', function(callback) {
               'minify',
               callback);
 });
+
+gulp.task("deploy", function () {
+  return gulp.src("dist/v1.1.0/**/*")
+  .pipe(gulp.dest("../../morphIT/client/thirdparty/orbjs/1.1.0_dev"));
+});

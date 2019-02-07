@@ -9,6 +9,15 @@ module.exports = function () {
     
     return gulp
         .src(['./src/js/**/*.js', './src/js/**/*.jsx'])
-        .pipe(eslint())
+        .pipe(eslint({
+            "rules": {
+                "no-mixed-spaces-and-tabs": 0,
+                "no-unused-vars": 0,
+                "quotes": 0,
+            },
+            "globals": {
+                "google": true
+            }
+        }))
         .pipe(eslint.format());
 };

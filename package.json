@@ -32,21 +32,26 @@
     "node": ">=4.2.4"
   },
   "dependencies": {
+    "@babel/runtime": "latest",
     "react": "~0.14.3",
     "react-dom": "~0.14.3"
   },
   "devDependencies": {
+    "babel-core": "latest",
+    "@babel/plugin-transform-runtime": "latest",
     "babel-eslint": "latest",
-    "babel-plugin-transform-runtime": "latest",
-    "babel-preset-es2015": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-latest": "latest",
     "babel-preset-react": "latest",
-    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-react-app": "latest",
+    "babel-preset-stage-0": "latest",
     "babel-register": "latest",
     "babelify": "latest",
     "browserify": "latest",
     "del": "latest",
-    "eslint-plugin-react": "^3.13.1",
-    "gulp": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "gulp": "^3.9.1",
     "gulp-babel": "latest",
     "gulp-concat": "latest",
     "gulp-cssnano": "latest",
@@ -65,6 +70,7 @@
     "less": "latest",
     "run-sequence": "latest",
     "vinyl-buffer": "latest",
-    "vinyl-source-stream": "latest"
+    "vinyl-source-stream": "latest",
+    "webpack": "latest"
   }
 }
