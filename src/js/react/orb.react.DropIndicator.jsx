@@ -4,9 +4,10 @@
 'use strict';
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
+		createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     DragManager = require('./orb.react.DragManager.jsx');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
 	displayName: 'DropIndicator',
 	getInitialState: function () {
 		DragManager.registerIndicator(this, this.props.axetype, this.props.position, this.onDragOver, this.onDragEnd);

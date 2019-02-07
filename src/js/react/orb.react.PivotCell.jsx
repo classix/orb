@@ -5,12 +5,13 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     uiheaders = require('../orb.ui.header'),
     domUtils = require('../orb.utils.dom'),
     _paddingLeft = null,
     _borderLeft = null;
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   expand: function() {
       this.props.pivotTableComp.pgridwidget.expandRow(this.props.cell);
   },

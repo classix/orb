@@ -4,9 +4,10 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     PivotCell = require('./orb.react.PivotCell.jsx'),
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     axe = require('../orb.axe');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   render: function() {
     var self = this;
     

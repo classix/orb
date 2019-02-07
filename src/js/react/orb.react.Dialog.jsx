@@ -4,6 +4,7 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     utils = require('../orb.utils');
 
 function createOverlay() {
@@ -13,7 +14,7 @@ function createOverlay() {
   return overlayElement;
 }
 
-var Dialog = module.exports = React.createClass({
+var Dialog = module.exports = createReactClass({
   statics: {
     create: function() {
         var dialogFactory = React.createFactory(Dialog);

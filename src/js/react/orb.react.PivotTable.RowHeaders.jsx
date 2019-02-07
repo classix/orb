@@ -4,10 +4,11 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     PivotRow = require('./orb.react.PivotRow.jsx'),
     axe = require('../orb.axe');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   setColGroup: function(widths) {
       var node = ReactDOM.findDOMNode(this);
     var colGroupNode = this.refs.colgroup;

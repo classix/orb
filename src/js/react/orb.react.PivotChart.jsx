@@ -3,7 +3,8 @@
 'use strict';
 
 var React = typeof window === 'undefined' ? require('react') : window.React,    
-    ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,    
+    ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     DragManager = require('./orb.react.DragManager.jsx'),
     SizingManager = require('./orb.react.PivotTable.SizingManager.jsx'),
     Toolbar = require('./orb.react.Toolbar.jsx'),
@@ -16,7 +17,7 @@ var React = typeof window === 'undefined' ? require('react') : window.React,
     pivotId = 1,
     themeChangeCallbacks = {};
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   id: pivotId++,
   pgrid: null,
   pgridwidget: null,

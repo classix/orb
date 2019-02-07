@@ -4,9 +4,10 @@
 'use strict';
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
+createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     utils = require('../orb.utils');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
 	openOrClose: function(e) {
 		var valueNode = this.refs.valueElement;
 		var valuesListNode = this.refs.valuesList;

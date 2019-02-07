@@ -26,8 +26,7 @@ module.exports = function () {
         entries: ['./src/js/orb.js'],
         debug: false,
         standalone: 'orb'
-    }).external('react')
-        .external('react-dom');
+    }).external('react').external('react-dom').external('create-react-class');
 
     var bundle = function () {
         return bundler

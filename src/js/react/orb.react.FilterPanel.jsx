@@ -5,13 +5,14 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     Dropdown = require('./orb.react.Dropdown.jsx'),
     utils = require('../orb.utils'),
     filtering = require('../orb.filtering'),
     domUtils = require('../orb.utils.dom');
 
 
-module.exports = React.createClass({
+module.exports = createReactClass({
 	pgridwidget: null,
 	values: null,
 	filterManager: null,

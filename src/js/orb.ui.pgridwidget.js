@@ -9,6 +9,7 @@
 /*jshint eqnull: true*/
 
 var ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     axe = require('./orb.axe'),
     pgrid = require('./orb.pgrid'),
     uiheaders = require('./orb.ui.header'),

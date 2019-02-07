@@ -3,6 +3,7 @@
 'use strict';
 
 var ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     domUtils = require('../orb.utils.dom');
 
 var SizingManager = module.exports = {

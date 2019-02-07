@@ -3,10 +3,11 @@
 'use strict';
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     utils = require('../orb.utils');
 
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   render: function() {
     var data = this.props.data;
     var headers = this.props.headers;

@@ -5,9 +5,10 @@
 var React = typeof window === 'undefined' ? require('react') : window.React,
     axe = require('../orb.axe'),
     PivotButton = require('./orb.react.PivotButton.jsx'),
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     DropTarget = require('./orb.react.DropTarget.jsx');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   render: function() {
     var self = this;
     var config = this.props.pivotTableComp.pgridwidget.pgrid.config;

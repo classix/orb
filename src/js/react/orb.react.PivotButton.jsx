@@ -5,6 +5,7 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     FilterPanel = require('./orb.react.FilterPanel.jsx'),
     DragManager = require('./orb.react.DragManager.jsx'),
     utils = require('../orb.utils'),
@@ -12,7 +13,7 @@ var React = typeof window === 'undefined' ? require('react') : window.React,
     domUtils = require('../orb.utils.dom'),
     pbid = 0;
 
-module.exports = React.createClass({
+module.exports = createReactClass({
 	displayName: 'PivotButton',
 	getInitialState: function () {
 		this.pbid = ++pbid;

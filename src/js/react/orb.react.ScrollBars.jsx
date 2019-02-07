@@ -5,6 +5,7 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     utils = require('../orb.utils'),
     domUtils = require('../orb.utils.dom');
 
@@ -179,7 +180,7 @@ function ScrollEvent(scrollBarComp) {
   };
 }
 
-module.exports.HorizontalScrollBar = React.createClass({
+module.exports.HorizontalScrollBar = createReactClass({
   mixins: [scrollBarMixin],
   posProp: 'x',
   mousePosProp: 'pageX',
@@ -188,7 +189,7 @@ module.exports.HorizontalScrollBar = React.createClass({
   cssClass: 'orb-h-scrollbar'
 });
 
-module.exports.VerticalScrollBar = React.createClass({
+module.exports.VerticalScrollBar = createReactClass({
   mixins: [scrollBarMixin],
   posProp: 'y',
   mousePosProp: 'pageY',

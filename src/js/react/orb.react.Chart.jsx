@@ -3,9 +3,10 @@
 'use strict';
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
-    ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM;
+    ReactDOM = typeof window === 'undefined' ? require('react-dom') : window.ReactDOM,
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass;
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   getInitialState: function() {
     return {
       canRender: false

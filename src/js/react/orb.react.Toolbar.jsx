@@ -5,9 +5,10 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     axe = require('../orb.axe'),
+    createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     domUtils = require('../orb.utils.dom');
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   _toInit: [],
   componentDidMount: function() {
     for(var i = 0; i < this._toInit.length; i++){

@@ -5,11 +5,12 @@
 
 var React = typeof window === 'undefined' ? require('react') : window.React,
     DragManager = require('./orb.react.DragManager.jsx'),
-    DropIndicator = require('./orb.react.DropIndicator.jsx'),    
+		DropIndicator = require('./orb.react.DropIndicator.jsx'),    
+		createReactClass = typeof window === 'undefined' ? require('create-react-class') : window.createReactClass,
     axe = require('../orb.axe'),
     dtid = 0;
 
-module.exports = React.createClass({
+module.exports = createReactClass({
 	getInitialState: function () {
 		this.dtid = ++dtid;
 		return {

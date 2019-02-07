@@ -33,8 +33,9 @@
   },
   "dependencies": {
     "@babel/runtime": "latest",
-    "react": "~0.14.3",
-    "react-dom": "~0.14.3"
+    "react": "latest",
+    "react-dom": "latest",
+    "create-react-class": "latest"
   },
   "devDependencies": {
     "babel-core": "latest",
