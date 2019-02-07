@@ -19,22 +19,14 @@ module.exports = createReactClass({
 		DragManager.unregisterIndicator(this);
 	},
 	onDragOver: function(callback) {
-		if(this.isMounted()) {
-			this.setState({
-				isover: true
-			}, callback);
-		} else if(callback) {
-			callback();
-		}
+		this.setState({
+			isover: true
+		}, callback);
 	},
 	onDragEnd: function(callback) {
-		if(this.isMounted()) {
-			this.setState({
-				isover: false
-			}, callback);
-		} else if(callback) {
-			callback();
-		}
+		this.setState({
+			isover: false
+		}, callback);
 	},
 	render: function() {
 		var classname = 'drp-indic' + (this.props.isVertical ? '-vertical' : '');

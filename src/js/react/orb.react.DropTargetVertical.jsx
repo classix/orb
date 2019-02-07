@@ -23,22 +23,14 @@ module.exports = createReactClass({
 		DragManager.unregisterTarget(this);
 	},
 	onDragOver: function(callback) {
-		if(this.isMounted()) {
 			this.setState({
 				isover: true
 			}, callback);
-		} else if(callback) {
-			callback();
-		}
 	},
 	onDragEnd: function(callback) {
-		if(this.isMounted()) {
 			this.setState({
 				isover: false
 			}, callback);
-		} else if(callback) {
-			callback();
-		}
 	},
 	render: function() {	
 		var self = this;
