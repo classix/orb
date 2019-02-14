@@ -16,7 +16,8 @@ module.exports = function () {
                 "quotes": 0,
             },
             "globals": {
-                "google": true
+                "google": true,
+                "$": true
             }
         }))
         .pipe(eslint.format());
