@@ -26,7 +26,7 @@ var SizingManager = module.exports = {
         chartWidth = pivot.w - rBtnsWidth,
 
         pivotHeight = pivotComp.pgridwidget.pgrid.config.height,
-        chartHeight = !pivotHeight ? null : (pivotHeight - (topBtns.h + cBtns.h));
+        chartHeight = !pivotHeight ? null : (parseInt(pivotHeight) - (topBtns.h + cBtns.h));
 
     // set pivotWrapperTable columns width to fixed value
     domUtils.updateTableColGroup(pivotWrapperTable, [
@@ -58,7 +58,7 @@ var SizingManager = module.exports = {
         dataCellsContainerWidth = Math.min(dataCellsWidths.total + 1, pivot.w - rHeadersWidth - vScroll.w),
 
         pivotHeight = pivotComp.pgridwidget.pgrid.config.height,
-        dataCellsRemHeight = !pivotHeight ? null : (pivotHeight - (toolbar ? toolbar.h + 17 : 0) - (topBtns.h + cBtns.h + cHeadersTbl.h + hScroll.h)), 
+        dataCellsRemHeight = !pivotHeight ? null : (parseInt(pivotHeight) - (toolbar ? toolbar.h + 17 : 0) - (topBtns.h + cBtns.h + cHeadersTbl.h + hScroll.h)), 
         dataCellsTableHeight = !dataCellsRemHeight ? null : Math.ceil(Math.min(dataCellsRemHeight, dataCellsTbl.h));
 
 
