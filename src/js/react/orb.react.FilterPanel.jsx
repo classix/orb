@@ -116,12 +116,12 @@ module.exports = createReactClass({
 						]} selectedValue={currentFilter && currentFilter.operator ? currentFilter.operator.name : filtering.Operators.MATCH.name} onValueChanged={ this.filterManager.onOperatorChanged }>
 					</Dropdown>
 				</td>
-				<td className="srchtyp-col" title="Enable/disable Regular expressions">.*</td>
-				<td className="srchbox-col">
+				<td className="srchtyp-col" title="Mit/Ohne RegEx">.*</td>
+				<td className="srchbox-col" colspan="2">
 					<table style={{width: '100%'}}>
 						<tbody>
 							<tr>
-								<td><input type="text" placeholder="search"/></td>
+								<td><input type="text" placeholder="Suche ..."/></td>
 								<td><div className="srchclear-btn" onClick={this.clearFilter}>x</div></td>
 							</tr>
 						</tbody>
@@ -129,7 +129,7 @@ module.exports = createReactClass({
 				</td>
 			</tr>
 			<tr>
-				<td colSpan="3" className="fltr-vals-col">
+				<td colSpan="4" className="fltr-vals-col">
 					<table className="fltr-vals-tbl" ref="valuesTable">
 					<tbody>
 						{checkboxes}
@@ -138,9 +138,9 @@ module.exports = createReactClass({
 				</td>
 			</tr>
 			<tr className="bottom-row">
-				<td className="cnfrm-btn-col" colSpan="2">
-					<input type="button" className={buttonClass} value="Ok" style={{ float: 'left' }}/>
-					<input type="button" className={buttonClass} value="Cancel" style={{ float: 'left' }}/>
+				<td className="cnfrm-btn-col" colSpan="3">
+					<input type="button" className={buttonClass} value="Anwenden" style={{ float: 'left' }}/>
+					<input type="button" className={buttonClass} value="Abbrechen" style={{ float: 'left' }}/>
 				</td>
 				<td className="resize-col">
 					<div></div>

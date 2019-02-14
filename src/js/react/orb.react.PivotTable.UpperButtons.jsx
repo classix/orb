@@ -25,7 +25,7 @@ module.exports = createReactClass({
       });
       fieldsDropTarget = <tr>
         <td className="flds-grp-cap av-flds text-muted">
-          <div>Fields</div>
+          <div>Felder</div>
         </td>
         <td className="av-flds">
           <DropTarget buttons={fieldsButtons} axetype={null}>
@@ -47,7 +47,7 @@ module.exports = createReactClass({
 
     var dataDropTarget = <tr>
       <td className="flds-grp-cap text-muted">
-        <div>Data</div>
+        <div>Datenfelder</div>
       </td>
       <td className="empty">
         <DropTarget buttons={dataButtons} axetype={axe.Type.DATA}>

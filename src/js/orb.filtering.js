@@ -70,7 +70,7 @@ var ops = filtering.Operators = {
     },
     NONE: null,
     MATCH: {
-        name: 'Matches',
+        name: 'Entspricht',
         func: function(value, term) {
             if(value) {
                 return value.toString().search(utils.isRegExp(term) ? term : new RegExp(term, 'i')) >= 0;
@@ -81,7 +81,7 @@ var ops = filtering.Operators = {
         regexpSupported: true
     },
     NOTMATCH: {
-        name: 'Does Not Match',
+        name: 'Entspricht nicht',
         func: function(value, term) {
             if(value) {
                 return value.toString().search(utils.isRegExp(term) ? term : new RegExp(term, 'i')) < 0;
