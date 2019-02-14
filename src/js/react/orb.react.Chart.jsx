@@ -56,7 +56,7 @@ module.exports = createReactClass({
   },
   render: function() {
     if(this.canRender()) {
-      return <div className="chart" style={this.state.chartStyle}></div>;
+      return <div className="chart" tabindex="0" style={this.state.chartStyle}></div>;
     }
     return null;
   }

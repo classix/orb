@@ -154,7 +154,7 @@ module.exports = createReactClass({
     if(config.height) { tblStyle.height = config.height; }
 
     return (
-    <div className={classes.container} style={tblStyle} ref="pivot">
+    <div tabindex="0" className={classes.container} style={tblStyle} ref="pivot">
       {config.toolbar && config.toolbar.visible ? <div ref="toolbar" className="orb-toolbar">
         <Toolbar pivotTableComp={self}></Toolbar>
       </div> : null}
