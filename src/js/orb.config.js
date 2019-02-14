@@ -231,6 +231,10 @@ module.exports.config = function(config) {
     };
 
     this.nameToCaption = function(name) {
+        var intValue = parseInt(name);
+        if (intValue == name) {
+            name = intValue;
+        }
         var fnameIndex = self.dataSourceFieldNames.indexOf(name);
         return fnameIndex >= 0 ? self.dataSourceFieldCaptions[fnameIndex] : name;
     };
