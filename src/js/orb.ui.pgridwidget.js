@@ -99,11 +99,21 @@ module.exports = function(config) {
     this.expandRow = function(cell) {
         cell.expand();
         this.render();
+        if (self.pgrid.config.eventCallbacks.onHeightChanged) {
+            window.setTimeout(function () {
+                self.pgrid.config.eventCallbacks.onHeightChanged($('.orb-container').height());
+            }, 0);
+        }
     };
   
     this.collapseRow = function(cell) {
         cell.subtotalHeader.collapse();
         this.render();
+        if (self.pgrid.config.eventCallbacks.onHeightChanged) {
+            window.setTimeout(function () {
+                self.pgrid.config.eventCallbacks.onHeightChanged($('.orb-container').height());
+            }, 0);
+        }
     };
 
     this.sort = function(axetype, field) {
@@ -213,7 +223,17 @@ module.exports = function(config) {
         self.pgrid.subscribe(pgrid.EVENT_SORT_CHANGED, buildUiAndRender);
         self.pgrid.subscribe(pgrid.EVENT_CONFIG_CHANGED, buildUiAndRender);
         
-        buildUi();  
+        buildUi();
+
+        if (self.pgrid.config.eventCallbacks.onInit) {
+            self.pgrid.config.eventCallbacks.onInit();
+        }
+
+        if (self.pgrid.config.eventCallbacks.onHeightChanged) {
+            window.setTimeout(function () {
+                self.pgrid.config.eventCallbacks.onHeightChanged($('.orb-container').height());
+            }, 0);
+        }
     }
 
     function buildUi() {
@@ -272,6 +292,11 @@ module.exports = function(config) {
     function buildUiAndRender() {
         buildUi();
         self.render();
+        if (self.pgrid.config.eventCallbacks.onHeightChanged) {
+            window.setTimeout(function () {
+                self.pgrid.config.eventCallbacks.onHeightChanged($('.orb-container').height());
+            }, 0);
+        }
     }
     
     init();

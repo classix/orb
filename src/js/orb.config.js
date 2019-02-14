@@ -212,6 +212,8 @@ module.exports.config = function(config) {
     this.theme = themeManager;
     this.chartMode = new ChartConfig(config.chartMode);
 
+    this.eventCallbacks = config.eventCallbacks || {};
+
     themeManager.current(config.theme);
 
     this.rowSettings = new Field(config.rowSettings, false);
